@@ -56,6 +56,7 @@ async def list_tables() -> List[str]:
             rows = cur.fetchall()
     return [row[0] for row in rows]
 
+# Return column names and types for a given table
 @mcp.tool()
 async def get_schema(table: str) -> List[Dict]:
     """Return column names and types for a given table."""
